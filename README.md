@@ -6,7 +6,7 @@
 See more information [here](https://codingdojo.org/WhatIsCodingDojo/)
 
 ### What can you tell me about this dojo ?
-- In this Dojo we are going to replicate some of the functionality of the [Bomberman#1983](https://en.wikipedia.org/wiki/Bomberman_(1983_video_game)) game.
+In this Dojo we are going to replicate some of the functionality of the [Bomberman#1983](https://en.wikipedia.org/wiki/Bomberman_(1983_video_game)) game.
 
 The use cases are the following:
 - The bomberman steps into a cell which is empty then it moves in
