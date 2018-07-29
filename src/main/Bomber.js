@@ -1,4 +1,5 @@
 import Bomb from './Bomb';
+import Trayectory from './Trayectory';
 
 class Bomber {
   
@@ -22,6 +23,10 @@ class Bomber {
 
   leavesBomb() {
     return new Bomb(this.currentLocation);
+  }
+
+  throwsBomb(targetedCell) {
+    return new Trayectory([this.currentLocation, targetedCell]);
   }
 
   bumpsIntoBagulaa(bagulaa) {

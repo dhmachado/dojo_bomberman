@@ -39,8 +39,21 @@ describe('Bomberman', () => {
 
     let bomb = bomber.leavesBomb();
     bomb.ticks();
-    
+
     let explotion = bomb.ticks();
+    explotion.damages(cellWithBrick);
+
+    assert.isTrue(cellWithBrick.isEmpty());
+  });
+
+  it("throws a boom to a brick, the boom explotes and the bricks disappears", () => {
+    let bomber = new Bomber(new Cell());
+    let cellWithBrick = new Cell(new Brick());
+
+    var trayectory = bomber.throwsBomb(cellWithBrick);
+    trayectory.swishs();
+    var explotion = trayectory.swishs();
+
     explotion.damages(cellWithBrick);
 
     assert.isTrue(cellWithBrick.isEmpty());
