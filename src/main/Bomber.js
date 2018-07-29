@@ -1,3 +1,5 @@
+import Bomb from './Bomb';
+
 class Bomber {
   
   constructor(bornPlace) {
@@ -16,6 +18,10 @@ class Bomber {
 
   stepsOut(placeToMoveOut) {
     placeToMoveOut.releasedBy(this);
+  }
+
+  leavesBomb() {
+    return new Bomb(this.currentLocation);
   }
 
   bumpsIntoBagulaa(bagulaa) {

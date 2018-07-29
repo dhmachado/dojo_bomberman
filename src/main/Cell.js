@@ -6,12 +6,20 @@ class Cell {
         this.occupant = occupant;
     }
 
-    releasedBy(something) {
+    releasedBy() {
         this.occupant = new Nobody();
     }
 
     reclaimedBy(something) {
         this.occupant = this.occupant.bumpsInto(something);
+    }
+
+    isEmpty() {
+        return this.occupant.isEqual(new Nobody());
+    }
+
+    asArray() {
+        return [this];
     }
 
 }

@@ -4,6 +4,10 @@ class Nobody {
         return aCharacterOrObject;
     }
 
+    isEqual() {
+        return true;
+    }
+
 }
 
 export default Nobody;

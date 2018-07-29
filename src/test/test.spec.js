@@ -31,6 +31,19 @@ describe('Bomberman', () => {
     
     assert.equal( bomber.isDead(), true);
     assert.equal( bomber.isAlive(), false);
-});
+  });
+
+  it("leaves a boom next to a brick, the boom explotes and the bricks disappears", () => {
+    let bomber = new Bomber(new Cell());
+    let cellWithBrick = new Cell(new Brick());
+
+    let bomb = bomber.leavesBomb();
+    bomb.ticks();
+    
+    let explotion = bomb.ticks();
+    explotion.damages(cellWithBrick);
+
+    assert.isTrue(cellWithBrick.isEmpty());
+  });
 
 });
