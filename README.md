@@ -17,5 +17,10 @@ The use cases are the following:
 
 ### What interesting things will I see in this dojo ?
 - First of all the game was coded using [TDD](https://en.wikipedia.org/wiki/Test-driven_development) which means that we created first the tests and then implement the logic needed for the tests to pass. This ensure us that every piece of functionality is 100% tested.
-- We also used the [Null Object Pattern](https://en.wikipedia.org/wiki/Null_object_pattern). This help us to instead of using a null reference to convey absence of an object, one uses an object which implements the expected interface, but whose method body is empty. The advantage of this approach over a working default implementation is that a null object is very predictable and has no side effects: it does nothing. The example on this repository is the Nothing.js class, and this is the default value for when we create a Cell that is empty, so instead of having a null occupant of this cell we have Nothing as the occupant.
-- 
+
+- We also used the [Null Object Pattern](https://en.wikipedia.org/wiki/Null_object_pattern). 
+This help us to instead of using a null reference to convey absence of an object, one uses an object which implements the expected interface, but whose method body is empty. The advantage of this approach over a working default implementation is that a null object is very predictable and has no side effects: it does nothing. 
+The example on this repository is the Nothing.js class, and this is the default value for when we create a Cell that is empty, so instead of having a null occupant of this cell we have Nothing as the occupant.
+
+- We also used a [Double Dispatch](https://en.wikipedia.org/wiki/Double_dispatch).
+
