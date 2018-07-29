@@ -3,6 +3,8 @@ class Bomber {
   constructor(bornPlace) {
     bornPlace.reclaimedBy(this);
     this.currentLocation = bornPlace;
+
+    this.lives = 100;
   }
 
   stepsIn(placeToMoveInto) {
@@ -14,6 +16,18 @@ class Bomber {
 
   stepsOut(placeToMoveOut) {
     placeToMoveOut.releasedBy(this);
+  }
+
+  bumpsIntoBagulaa(bagulaa) {
+    this.lives = 0;
+  }
+
+  isDead() {
+    return this.lives <= 0;
+  }
+
+  isAlive() {
+    return !this.isDead();
   }
 
   isIn(place) {

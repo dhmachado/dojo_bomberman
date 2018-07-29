@@ -3,6 +3,7 @@ import { expect, assert } from 'chai';
 import Bomber from '../main/Bomber';
 import Cell from '../main/Cell';
 import Brick from '../main/Brick';
+import Bagulaa from '../main/Bagulaa';
 
 describe('Bomberman', () => {
 
@@ -21,5 +22,15 @@ describe('Bomberman', () => {
     
     assert.throws( () => { bomber.stepsIn(here); });
   });
+
+  it("steps into a cell which is busy with an enemy then it dies", () => {
+    let bomber = new Bomber( new Cell() );
+    let here = new Cell( new Bagulaa() );
+    
+    bomber.stepsIn( here );
+    
+    assert.equal( bomber.isDead(), true);
+    assert.equal( bomber.isAlive(), false);
+});
 
 });
