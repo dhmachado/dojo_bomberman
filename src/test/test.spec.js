@@ -1,34 +1,18 @@
 import { expect, assert } from 'chai';
-import Dojo from '../main/Dojo';
 
-describe('dojo', () => {
-  it('should return the correct sensei name', () => {
-    const dojo = new Dojo({
-      sensei: 'Diego'
-    });
+import Bomber from '../main/Bomber';
+import Cell from '../main/Cell';
 
-    const expected = '{"sensei":"Diego"}';
+describe('Bomberman', () => {
 
-    expect(dojo.toJSON()).to.be.equal(expected);
+  it('steps into a cell which is empty then it moves in', () => {
+    let bornPlace = new Cell();
+    let bomber = new Bomber( bornPlace );
+    let here = new Cell();
+    
+    bomber.stepsIn( here );
+    
+    assert.equal( bomber.isIn(here), true);
   });
-
-  it("it should not be equal", () => {	
-    const dojoSouth = new Dojo({ sensei: 'Diego' });
-    const dojoNorth = new Dojo({ sensei: 'Juan' });
-
-    assert.equal(dojoSouth.isEqual(dojoNorth), false);
-  });
-
-  it("it should be equal", () => {	
-    const dojoSouth = new Dojo({ sensei: 'Diego' });
-    const dojoNorth = new Dojo({ sensei: 'Diego' });
-
-    assert.equal(dojoSouth.isEqual(dojoNorth), true);
-  });	
   
-  it("it should throw an exception", () => {	
-    const dojito = new Dojo();
-
-    assert.throws(() => {	dojito.explode() });	
-  });
 });
