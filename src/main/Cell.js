@@ -2,8 +2,8 @@ import Nobody from './Nobody.js';
 
 class Cell {
 
-    constructor() {
-        this.occupant = new Nobody();
+    constructor(occupant = new Nobody()) {
+        this.occupant = occupant;
     }
 
     releasedBy(something) {
