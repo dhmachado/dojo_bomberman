@@ -1,5 +1,7 @@
 # Dojo Bomberman
 
+[![BCH compliance](https://bettercodehub.com/edge/badge/dhmachado/dojo_bomberman?branch=master)](https://bettercodehub.com/)
+
 ### What are dojos ?
 - A Coding Dojo is a meeting where a bunch of coders get together to work on a programming challenge. They are there have fun and to engage in [DeliberatePractice](https://codingdojo.org/DeliberatePractice/) in order to improve their skills.
 
