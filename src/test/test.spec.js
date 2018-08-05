@@ -50,9 +50,9 @@ describe('Bomberman', () => {
     let bomber = new Bomber(new Cell());
     let cellWithBrick = new Cell(new Brick());
 
-    var trayectory = bomber.throwsBomb(cellWithBrick);
+    let trayectory = bomber.throwsBomb(cellWithBrick);
     trayectory.swishs();
-    var explotion = trayectory.swishs();
+    let explotion = trayectory.swishs();
 
     explotion.damages(cellWithBrick);
 
