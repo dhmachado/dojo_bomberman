@@ -13,7 +13,7 @@ describe('Bomberman', () => {
     
     bomber.stepsIn(here);
     
-    assert.equal(bomber.isIn(here), true);
+    assert.equal(bomber.isIn(here), false);
   });
   
   it("steps into a cell which is busy with an object then it doesn't move and throw an exception", () => {
